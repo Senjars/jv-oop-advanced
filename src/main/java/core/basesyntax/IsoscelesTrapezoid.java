@@ -22,6 +22,6 @@ public class IsoscelesTrapezoid extends FColorS implements Figure {
         System.out.println("Figure: isosceles trapezoid, area: "
                 + getArea() + " units, lognerSide: "
                 + longerSide + " units, shorterSide: " + shorterSide + " units, height: "
-                + height + " units, color: " + color);
+                + height + " units, color: " + getColor());
     }
 }

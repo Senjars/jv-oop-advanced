@@ -1,9 +1,13 @@
 package core.basesyntax;
 
 public abstract class FColorS {
-    final String color;
+    private final String color;
 
     protected FColorS(String color) {
         this.color = color;
+    }
+
+    public String getColor() {
+        return color;
     }
 }

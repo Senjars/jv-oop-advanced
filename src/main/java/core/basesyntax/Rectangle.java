@@ -18,6 +18,6 @@ public class Rectangle extends FColorS implements Figure {
     @Override
     public void draw() {
         System.out.println("Figure: rectangle, area: " + getArea() + " units, height: " + height
-                + " units, length: " + length + " units, color: " + color);
+                + " units, length: " + length + " units, color: " + getColor());
     }
 }
