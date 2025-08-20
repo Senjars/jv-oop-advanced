@@ -1,12 +1,9 @@
 package core.basesyntax;
 
-import java.util.Random;
-
 public class Rectangle implements Figure {
-    private int height;
-    private int length;
+    private final int height;
+    private final int length;
     private final String color;
-
 
     public Rectangle(int height, int length, String color) {
         this.height = height;

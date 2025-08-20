@@ -1,12 +1,9 @@
 package core.basesyntax;
 
-import java.util.Random;
-
 public class RightTriangle implements Figure {
-    private int height;
-    private int base;
+    private final int height;
+    private final int base;
     private final String color;
-
 
     public RightTriangle(int height, int base, String color) {
         this.height = height;
