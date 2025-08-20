@@ -4,7 +4,6 @@ public class Square implements Figure {
     private int side;
     private final String color;
 
-
     public Square(int side, String color) {
         this.side = side;
         this.color = color;
