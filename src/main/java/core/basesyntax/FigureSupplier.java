@@ -13,30 +13,28 @@ public class FigureSupplier {
 
         switch (randomFigure) {
             case 0:
-                return new Square(random.nextInt(10) + 1,
-                        color);
+                return new Square(color, random.nextInt(10) + 1
+                );
             case 1:
-                return new IsoscelesTrapezoid(random.nextInt(10) + 1,
+                return new IsoscelesTrapezoid(color,random.nextInt(10) + 1,
                         random.nextInt(10) + 1,
-                        random.nextInt(10) + 1,
-                        color);
+                        random.nextInt(10) + 1);
             case 2:
-                return new RightTriangle(random.nextInt(10) + 1,
-                        random.nextInt(10) + 1,
-                        color);
+                return new RightTriangle(color, random.nextInt(10) + 1,
+                        random.nextInt(10) + 1
+                );
             case 3:
-                return new Rectangle(random.nextInt(10) + 1,
-                        random.nextInt(10) + 1,
-                        color);
+                return new Rectangle(color, random.nextInt(10) + 1,
+                        random.nextInt(10) + 1);
             case 4:
-                return new Circle(random.nextInt(10) + 1,
-                        color);
+                return new Circle(color, random.nextInt(10) + 1
+                );
             default:
                 return getDefaultFigure();
         }
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(10, "WHITE");
+        return new Circle("WHITE", 10);
     }
 }

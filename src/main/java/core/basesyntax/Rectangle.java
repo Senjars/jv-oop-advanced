@@ -1,11 +1,12 @@
 package core.basesyntax;
 
-public class Rectangle extends FColorS {
+public class Rectangle implements Figure, Drawable {
+    private final String color;
     private final int height;
     private final int length;
 
-    public Rectangle(int height, int length, String color) {
-        super(color);
+    public Rectangle(String color, int height, int length) {
+        this.color = color;
         this.height = height;
         this.length = length;
     }
@@ -17,7 +18,7 @@ public class Rectangle extends FColorS {
 
     @Override
     public void draw() {
-        System.out.println("Figure: rectangle, area: " + getArea() + " units, height: " + height
-                + " units, length: " + length + " units, color: " + getColor());
+        System.out.println("Figure: rectangle, area: " + getArea() + " sq. units, height: " + height
+                + " units, length: " + length + " units, color: " + color);
     }
 }
