@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class RightTriangle extends FColorS implements Figure {
+public class RightTriangle extends FColorS {
     private final int height;
     private final int base;
 

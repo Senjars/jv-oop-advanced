@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends FColorS implements Figure {
+public class IsoscelesTrapezoid extends FColorS {
     private final int longerSide;
     private final int shorterSide;
     private final int height;
