@@ -3,6 +3,7 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
+
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
@@ -12,23 +13,23 @@ public class FigureSupplier {
 
         switch (randomFigure) {
             case 0:
-                return new Square(random.nextInt(11),
+                return new Square(random.nextInt(10) + 1,
                         color);
             case 1:
-                return new IsoscelesTrapezoid(random.nextInt(11),
-                        random.nextInt(11),
-                        random.nextInt(11),
+                return new IsoscelesTrapezoid(random.nextInt(10) + 1,
+                        random.nextInt(10) + 1,
+                        random.nextInt(10) + 1,
                         color);
             case 2:
-                return new RightTriangle(random.nextInt(11),
-                        random.nextInt(11),
+                return new RightTriangle(random.nextInt(10) + 1,
+                        random.nextInt(10) + 1,
                         color);
             case 3:
-                return new Rectangle(random.nextInt(11),
-                        random.nextInt(11),
+                return new Rectangle(random.nextInt(10) + 1,
+                        random.nextInt(10) + 1,
                         color);
             case 4:
-                return new Circle(random.nextInt(11),
+                return new Circle(random.nextInt(10) + 1,
                         color);
             default:
                 return getDefaultFigure();

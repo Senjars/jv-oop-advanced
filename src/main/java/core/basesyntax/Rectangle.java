@@ -18,6 +18,7 @@ public class Rectangle implements Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: rectangle, area: " + getArea() + " units, height: " + height + " units, length: " + length + " units, color: " + color);
+        System.out.println("Figure: rectangle, area: " + getArea() + " units, height: " + height
+                + " units, length: " + length + " units, color: " + color);
     }
 }
