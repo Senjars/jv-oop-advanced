@@ -1,12 +1,11 @@
 package core.basesyntax;
 
-public class Circle implements Figure {
-    private int radius;
-    private String color;
+public class Circle extends FColorS implements Figure {
+    private final int radius;
 
     Circle(int radius, String color) {
+        super(color);
         this.radius = radius;
-        this.color = color;
     }
 
     @Override

@@ -1,16 +1,15 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid implements Figure {
-    private final String color;
-    private int longerSide;
-    private int shorterSide;
-    private int height;
+public class IsoscelesTrapezoid extends FColorS implements Figure {
+    private final int longerSide;
+    private final int shorterSide;
+    private final int height;
 
     public IsoscelesTrapezoid(int longerSide, int shorterSide, int height, String color) {
+        super(color);
         this.height = height;
         this.shorterSide = shorterSide;
         this.longerSide = longerSide;
-        this.color = color;
     }
 
     @Override

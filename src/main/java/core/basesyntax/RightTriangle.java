@@ -1,14 +1,13 @@
 package core.basesyntax;
 
-public class RightTriangle implements Figure {
+public class RightTriangle extends FColorS implements Figure {
     private final int height;
     private final int base;
-    private final String color;
 
     public RightTriangle(int height, int base, String color) {
+        super(color);
         this.height = height;
         this.base = base;
-        this.color = color;
     }
 
     @Override
