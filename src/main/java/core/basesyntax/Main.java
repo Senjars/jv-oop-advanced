@@ -1,22 +1,23 @@
 package core.basesyntax;
 
-import java.util.Arrays;
-
 public class Main {
+    private static final int ARRAY_SIZE = 6;
+
     public static void main (String[] args) {
-        Figure[] figures = new Figure[6];
+        FigureSupplier figureSupplier = new FigureSupplier();
+
+        Figure[] figures = new Figure[ARRAY_SIZE];
 
         for (int i = 0; i < figures.length / 2; i++) {
-            figures[i] = FigureSupplier.getRandomFigure();
+            figures[i] = figureSupplier.getRandomFigure();
         }
 
         for (int i = figures.length / 2; i < figures.length; i++) {
-            figures[i] = FigureSupplier.getDefaultFigure();
+            figures[i] = figureSupplier.getDefaultFigure();
         }
 
-        String we = Arrays.toString(figures);
-        for (int i = 0; i < figures.length; i++) {
-            figures[i].draw();
+        for (Figure figure : figures) {
+            figure.draw();
         }
     }
 }

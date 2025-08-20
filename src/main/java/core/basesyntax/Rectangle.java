@@ -2,23 +2,25 @@ package core.basesyntax;
 
 import java.util.Random;
 
-import static core.basesyntax.Shape.random;
-
 public class Rectangle implements Figure {
+    private int height;
+    private int length;
+    private final String color;
 
-    private final int height = random.nextInt(11);
-    private final int length = random.nextInt(11);
 
-    public Rectangle(int height, int length) {
+    public Rectangle(int height, int length, String color) {
+        this.height = height;
+        this.length = length;
+        this.color = color;
     }
 
     @Override
-    public double areaCalculator() {
+    public double getArea() {
         return height * length;
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: Rectangle Area: " + areaCalculator() + " Height: " + height + " Length: " + length + " Color: " + ColorSupplier.getRandomColor());
+        System.out.println("Figure: rectangle, area: " + getArea() + " units, height: " + height + " units, length: " + length + " units, color: " + color);
     }
 }

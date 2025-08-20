@@ -1,21 +1,26 @@
 package core.basesyntax;
 
-import static core.basesyntax.Shape.random;
+import java.util.Random;
 
 public class RightTriangle implements Figure {
-    private final int height = random.nextInt(11);
-    private final int base = random.nextInt(11);
+    private int height;
+    private int base;
+    private final String color;
 
-    public RightTriangle(int height, int base) {
+
+    public RightTriangle(int height, int base, String color) {
+        this.height = height;
+        this.base = base;
+        this.color = color;
     }
 
     @Override
-    public double areaCalculator() {
+    public double getArea() {
         return 0.5 * height * base;
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: RightTriangle Area: " + areaCalculator() + " Height: " + height + " Base: " + base + " Color: " + ColorSupplier.getRandomColor());
+        System.out.println("Figure: right triangle, area: " + getArea() + " units, height: " + height + " units, base: " + base + " units, color: " + color);
     }
 }

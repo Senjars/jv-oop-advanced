@@ -1,21 +1,21 @@
 package core.basesyntax;
 
-import static core.basesyntax.Shape.random;
-
 public class Circle implements Figure {
-    private  int radius = random.nextInt(11);
+    private int radius;
+    private String color;
 
-    Circle(int radius, Color white) {
+    Circle(int radius, String color) {
         this.radius = radius;
+        this.color = color;
     }
 
     @Override
-    public double areaCalculator() {
+    public double getArea() {
         return Math.pow(radius, 2) * Math.PI;
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: Circle Area: " + areaCalculator() + " Radius: " + radius + " Color: " + ColorSupplier.getRandomColor());
+        System.out.println("Figure: circle, area: " + getArea() + " units, radius: " + radius + " units, color: " + color);
     }
 }
